@@ -40,28 +40,28 @@ def chooseStatus():
         return "Applied"
 
 def addApplication(applications):
-        company = input("Enter company name: ")
-        role = input("Enter role: ")
-        status = chooseStatus()
-        date_applied = getDateInput()
-        link = input("Enter the application link: ")
-        notes = input("Enter any additional notes: ")
+    company = input("Enter company name: ")
+    role = input("Enter role: ")
+    status = chooseStatus()
+    date_applied = getDateInput()
+    link = input("Enter the application link: ")
+    notes = input("Enter any additional notes: ")
 
-        application = {
-            "company": company,
-            "role": role,
-            "status": status,
-            "date_applied": date_applied,
-            "link": link,
-            "notes": notes
+    application = {
+        "company": company,
+        "role": role,
+        "status": status,
+        "date_applied": date_applied,
+        "link": link,
+        "notes": notes
 
-        }
+    }
 
-        applications.append(application)
-        saveApplications(applications)
-        print()
-        print("Application saved")
-        print()
+    applications.append(application)
+    saveApplications(applications)
+    print()
+    print("Application saved")
+    print()
 
 def printApplications(applications):
         if len(applications) == 0:
@@ -278,10 +278,11 @@ while True:
     print("1. Add application")
     print("2. View applications")
     print("3. Update status")
-    print("4. Delete an application")
-    print("5. Search an application")
-    print("6. View stats")
-    print("7. Exit")
+    print("4. Edit application")
+    print("5. Delete an application")
+    print("6. Search an application")
+    print("7. View stats")
+    print("8. Exit")
     print()
     choice = input("Choose an option: ")
     print()
@@ -302,6 +303,8 @@ while True:
     elif choice == '8':
         print("Exiting")
         break
+    else:
+        print("Invalid choice. Please choose 1, 2, 3, 4, 5, 6, 7, or 8.")
 
 
 
